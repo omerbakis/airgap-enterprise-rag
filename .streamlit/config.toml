@@ -1,0 +1,26 @@
+[server]
+# Air-gapped/lokal-öncelikli proje: varsayılan olarak yalnızca bu makineden
+# erişilebilir olmalı, LAN üzerindeki diğer cihazlardan değil.
+address = "127.0.0.1"
+headless = true
+# Kaynak-dosya izleyicisini kapat. Streamlit'in hot-reload izleyicisi, yüklü TÜM
+# modüllerin yolunu tarar; `transformers` yüzlerce görüntü-işleme modelini (lazy)
+# import etmeye çalışır ve her biri kurulu olmayan `torchvision`'ı arayıp
+# ModuleNotFoundError fırlatır — terminali traceback seliyle doldurur. Reranker
+# (bge-reranker-v2-m3) bir METİN cross-encoder'ıdır, torchvision GEREKMEZ; bu
+# yalnızca izleyici gürültüsüdür. İzleyiciyi kapatmak seli tamamen keser (tek
+# bedeli: kod değişince otomatik reload olmaz, uygulamayı elle yeniden başlatırsın).
+fileWatcherType = "none"
+
+[theme]
+# dataviz becerisinin doğrulanmış referans paletinden (references/palette.md):
+# mavi ana renk + nötr kurumsal yüzeyler. Durum rozetleri (good/warning/
+# critical) ve tüm tasarım sistemi app.py içindeki CSS değişkenleriyle
+# (:root --lr-*) sabitlenir; buradaki değerler onlarla hizalıdır.
+# base=light: kullanıcının OS teması ne olursa olsun arayüz tutarlı kalsın.
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#fbfbfa"
+secondaryBackgroundColor = "#f4f3f0"
+textColor = "#1b1b18"
+font = "sans serif"

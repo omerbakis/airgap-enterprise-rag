@@ -1,0 +1,30 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      # Foundry Local gerektirmeyen hızlı test paketi (sahte/fake provider'lar
+      # kullanır, bkz. tests/fakes.py). Foundry Local + gerçek modeller
+      # gerektiren entegrasyon testleri (tests/test_eval_regression.py)
+      # RUN_INTEGRATION_EVAL=1 olmadan varsayılan olarak zaten atlanır, bu
+      # yüzden CI'da GPU/model indirme gerektirmeden çalışır.
+      - name: Run test suite
+        run: python -m pytest -v

@@ -1,0 +1,54 @@
+{
+  "yonetim_strateji_2026.md": {
+    "classification": "gizli",
+    "department": "Yönetim"
+  },
+  "dolandiricilik_tespit_raporu.md": {
+    "classification": "gizli",
+    "department": "BT"
+  },
+  "personel_maas_bandi.md": {
+    "classification": "gizli",
+    "department": "IK"
+  },
+  "kvkk_veri_koruma_politikasi.md": {
+    "classification": "genel",
+    "department": "Uyum"
+  },
+  "aml_kyc_policy.md": {
+    "classification": "genel",
+    "department": "Uyum"
+  },
+  "kredi_risk_proseduru.md": {
+    "classification": "genel",
+    "department": "Finans"
+  },
+  "musteri_veri_siniflandirma.md": {
+    "classification": "genel",
+    "department": "BT"
+  },
+  "pci_dss_compliance.md": {
+    "classification": "genel",
+    "department": "BT"
+  },
+  "calisan_el_kitabi.md": {
+    "classification": "genel",
+    "department": "IK"
+  },
+  "onay_matrisi.xlsx": {
+    "classification": "genel",
+    "department": "Finans"
+  },
+  "guvenlik_farkindalik_egitimi.pptx": {
+    "classification": "genel",
+    "department": "BT"
+  },
+  "sss.html": {
+    "classification": "genel",
+    "department": "Genel"
+  },
+  "zehirli_test_dokumani.md": {
+    "classification": "genel",
+    "department": "Genel"
+  }
+}

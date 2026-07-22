@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+data/index.db
+data/index.db-*
+data/.dbkey
+.pytest_cache/
+*.egg-info/
+eval/candidates_draft.json
+offline_wheels/
+
+# Claude Code'un otomatik yüklediği yerel proje bağlamı — geliştirme
+# oturumlarına özgü notlar içerir, public repoda tutulmaz.
+CLAUDE.md
+
+# eval/last_eval_report*.json BİLİNÇLİ OLARAK takip edilir (gitignore'da
+# DEĞİL) — docs/DEMO_SENARYOLARI.md'deki performans sayılarının ham
+# kanıtıdır; repodan silinmemeli.
